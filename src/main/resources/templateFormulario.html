@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+<body>
+<table>
+    <tr>
+		<td style="width:151px;"></td>
+		<td style="width:51px;"></td>
+		<td style="width:151px;"></td>
+		<td style="width:151px;"></td>
+		<td style="width:151px;"></td>
+	</tr>
+	<tr>
+		<td colspan="3" style="text-align:left;">FORMATO DE SOLICITUD DE DERECHOS ARCO</td>
+		<td colspan="2" style="text-align:right;">
+			<img class="logo" src="logo_inkafarma.png" alt="logo">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5" style="text-align:right;">[[${data.getFecha()}]]</td>
+	</tr>
+    <tr>
+		<td colspan="3" style="text-align:left;">Acceso, Rectificación, Cancelación y Oposición de Datos Personales</td>
+		<td colspan="2" style="text-align:right;">
+			Solicitud Nro [[${data.getNroSolicitud()}]]
+		</td>
+	</tr>
+    <tr>
+		<td colspan="5" bgcolor="#CCC" style="text-align:left;"><strong>DATOS DEL TITULAR DE LOS    DATOS PERSONALES</strong></td>
+	</tr>
+    <tr>
+		<td><strong>Nombres</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getTitu_nombres()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Apellidos</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getTitu_apellidos()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Tipo Documento</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getTitu_tipodoc()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Nro de Documento</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getTitu_numdoc()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Email</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getTitu_email()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Domicilio</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getTitu_domicilio()}]]</td>
+	</tr>
+    <tr>
+		<td colspan="5" bgcolor="#CCC" style="text-align:left;"><strong>DATOS DEL REPRESENTANTE DEL TITULAR DE LOS DATOS PERSONALES (de ser el caso)</strong></td>
+	</tr>
+    <tr>
+		<td colspan="5" style="text-align:left;">El presente formulario deberá ser contestado únicamente por el representante legal del titular</td>
+	</tr>
+    <tr>
+		<td><strong>Nombres</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getRepre_nombres()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Apellidos</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getRepre_apellidos()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Tipo Documento</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getRepre_tipodoc()}]]</td>
+	</tr>
+    <tr>
+		<td><strong>Nro de Documento</strong></td>
+		<td><strong>:</strong></td>
+		<td colspan="3" style="text-align:left;">[[${data.getRepre_numdoc()}]]</td>
+	</tr>
+    <tr>
+		<td colspan="5" bgcolor="#CCC" style="text-align:left;"><strong>Seleccione el tipo de solicitud que desea ingresar:</strong></td>
+	</tr>
+    <tr>
+		<td colspan="5" style="text-align:left;">Marque con un aspa "X" en el recuadro correspondiente al tipo de solicitud de desea ingresar</td>
+	</tr>
+    <tr>
+		<td><strong>ACCESO</strong></td>
+		<td colspan="3" style="text-align:justify;">Acción destinada a obtener, de la Empresa, la información sobre uno mismo almacenada en el banco de datos, así como aquella referida a las condiciones y generalidades del tratamiento de dicha información.</td>
+		<td style="text-align:center;"><strong>[[${data.getTipoacceso()}]]</strong></td>
+	</tr>
+    <tr>
+		<td><strong>RECTIFICACIÓN</strong></td>
+		<td colspan="3" style="text-align:justify;">Acción destinada a: (i) actualizar sus datos; (ii) corregir aquella información que resulte ser inexacta, errónea o falsa; y/o (iii) incluir información en el banco de datos. En todos los casos deberá adjuntar la información que sustente la procedencia
+			de la rectificación.</td>
+		<td style="text-align:center;"><strong>[[${data.getTiporectificacion()}]]</strong></td>
+	</tr>
+    <tr>
+		<td><strong>CANCELACIÓN</strong></td>
+		<td colspan="3" style="text-align:justify;">Acción de supresión de información personal almacenada en un banco de datos en razón a que esta ya no es necesaria o pertinente para la finalidad para la cual fue recopilada, cuando hubiere vencido el plazo para su tratamiento o cuando haya revocado el
+			consentimiento otorgado.</td>
+		<td style="text-align:center;"><strong>[[${data.getTipocancelacion()}]]</strong></td>
+	</tr>
+    <tr>
+		<td><strong>OPOSICIÓN</strong></td>
+		<td colspan="3" style="text-align:justify;">Acción de impedir el tratamiento de datos personales o cese del mismo, cuando el titular no hubiere prestado su consentimiento o cuando acredite que medien motivos fundados y legítimos relativos a una concreta situación personal que lo justifiquen.</td>
+		<td style="text-align:center;"><strong>[[${data.getTipoposicion()}]]</strong></td>
+	</tr>
+    <tr>
+		<td colspan="5" style="text-align:left;"><strong>Exponga de forma clara y precisa en el espacio en blanco los alcances de su solicitud, señalando la información a la que desea acceder, rectificar, cancelar o respecto de la cual desea formular oposición:</strong></td>
+	</tr>
+	<tr>
+		<td colspan="5" style="text-align:left;">[[${data.getTextArea()}]]</td>
+	</tr>
+    <tr>
+		<td colspan="5" style="text-align:left;">Si cuenta con información adicional y/o documentos que faciliten la localización de los datos personales relacionados con la presente solicitud, por favor adjuntar copia de estos.</td>
+	</tr>
+    <tr>
+		<td colspan="5" style="text-align:left;"><strong>NOTIFICACIÓN DE LA RESPUESTA</strong></td>
+	</tr>
+    <tr>
+		<td colspan="5" style="text-align:left;">ECKERD PERU S.A. procederá a notificar la respuesta a su solicitud a la dirección de
+			correo electrónico indicado en el presente formulario. El titular de datos personales
+			autoriza y acepta la remisión de las notificaciones referidas a este procedimiento a
+			dicha dirección. Las solicitudes se responderán dentro de los plazos establecidos en el
+			Capítulo I del Título IV del Reglamento de la Ley de Protección de Datos Personales,
+			aprobado por Decreto Supremo No. 003-2013-JUS. Si transcurren los plazos antes indicados
+			sin haber recibido respuesta, usted podrá considerar denegada su solicitud, quedando a
+			salvo su derecho de iniciar un procedimiento de tutela ante la Dirección General de
+			Protección de Datos Personales (Ministerio de Justicia). Adicionalmente, si desea ser
+			notificado a su domicilio deberá enviar su solicitud firmada vía carta indicando su
+			nombre completo, tipo de solicitud, domicilio, fecha y copia de documento de identidad,
+			dirigida a ECKERD PERU S.A. con Domicilio fiscal en AV. DEFENSORES DEL MORRO NRO. 1277 LIMA - LIMA - CHORRILLOS.</td>
+	</tr>
+    <tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+</body>
+
+</html>
